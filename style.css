@@ -17,13 +17,14 @@ html {
 }
 
 body {
-  width: 144rem;
-  height: 96rem;
+  width: 100vw;
+  height: 100vh;
   font-family: "Figtree";
   font-size: 1.6rem;
   background-color: var(--main-color);
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 p {
   font-size: 1.6rem;
@@ -46,16 +47,27 @@ p {
   flex-direction: column;
   gap: 2rem;
   box-shadow: var(--black-color) 1rem 1rem;
+  margin: 0 1.2rem;
 }
 
 .blog-img {
-  width: 33.6rem;
-  height: 20rem;
+  width: 100%;
+  height: auto;
+  padding: 0 2.4rem;
+
+  & svg {
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+  }
 }
 
 .cont-content {
-  width: 33.4rem;
-  height: 19.4rem;
+  width: 100%;
+  height: auto;
+  padding: 0 2.4rem;
   display: flex;
   justify-content: center;
   align-items: start;
@@ -65,26 +77,35 @@ p {
     color: var(--gray-color);
     line-height: 2.5rem;
   }
-}
-.blog-img svg {
-  border-radius: 1rem;
-  -webkit-border-radius: 1rem;
-  -moz-border-radius: 1rem;
-  -ms-border-radius: 1rem;
-  -o-border-radius: 1rem;
+
+  & .category {
+    font-weight: 800;
+    width: 8.2rem;
+    height: 2.9rem;
+    display: grid;
+    place-items: center;
+    background-color: var(--main-color);
+    border-radius: 0.4rem;
+    -webkit-border-radius: 0.4rem;
+    -moz-border-radius: 0.4rem;
+    -ms-border-radius: 0.4rem;
+    -o-border-radius: 0.4rem;
+    margin-top: 0.6rem;
+  }
 }
 
 .author {
   display: flex;
   justify-content: start;
   align-items: center;
-  width: 33.4rem;
+  width: 100%;
   height: auto;
+  padding: 0 2.4rem;
   gap: 2rem;
 
   & .author-pic {
-    width: 3.2rem;
-    height: 3.2rem;
+    width: 10%;
+    height: auto;
   }
 
   & .author-name {
@@ -92,36 +113,30 @@ p {
   }
 }
 
-.category {
-  font-weight: 800;
-  width: 8.2rem;
-  height: 2.9rem;
-  display: grid;
-  place-items: center;
-  background-color: var(--main-color);
-  border-radius: 0.4rem;
-  -webkit-border-radius: 0.4rem;
-  -moz-border-radius: 0.4rem;
-  -ms-border-radius: 0.4rem;
-  -o-border-radius: 0.4rem;
-}
-
-.attribution {
+/* .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
-}
+} */
 
 /***** Media Queries Section *****/
-@media (width <= 1440) {
+@media (width <= 1440px) {
   html {
     font-size: 62.5%;
   }
-  @media (width <= 375) {
+  @media (width <= 445px) {
     html {
       font-size: 56.25%;
+    }
+    .container {
+      width: 32.7rem;
+      height: 50rem;
+    }
+    & .blog-img svg {
+      width: 100%;
+      height: auto;
     }
   }
 }
