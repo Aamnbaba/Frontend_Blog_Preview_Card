@@ -126,7 +126,7 @@ p {
   html {
     font-size: 62.5%;
   }
-  @media (width <= 445px) {
+  @media (width <= 375px) {
     html {
       font-size: 56.25%;
     }
