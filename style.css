@@ -128,7 +128,7 @@ p {
   }
   @media (width <= 375px) {
     html {
-      font-size: 56.25%;
+      font-size: 45%;
     }
     .container {
       width: 32.7rem;
